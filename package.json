@@ -1,0 +1,20 @@
+{
+  "name": "@mrgb/root",
+  "version": "1.0.0",
+  "description": "Lerna monorepos for Svelte applications",
+  "private": true,
+  "scripts": {
+    "start:blog:dev": "lerna exec --scope @mrgb/blog -- yarn dev"
+  },
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "workspaces": {
+    "packages": [
+      "packages/**"
+    ]
+  }
+}

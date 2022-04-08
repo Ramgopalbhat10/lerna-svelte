@@ -1,2 +1,4 @@
 <h1>Blog</h1>
-<p>My blog posts will go here eventually…</p>
+<ul>
+  <li><a href="/blog/learning-sveltekit">Learning Sveltekit</a></li>
+</ul>

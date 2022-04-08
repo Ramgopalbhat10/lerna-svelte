@@ -4,7 +4,7 @@
   "description": "Lerna monorepos for Svelte applications",
   "private": true,
   "scripts": {
-    "start:blog:dev": "lerna exec --scope @mrgb/blog -- yarn dev"
+    "start:blog:dev": "lerna exec --scope @mrgb/mdx-blog -- yarn dev"
   },
   "devDependencies": {
     "lerna": "^4.0.0"

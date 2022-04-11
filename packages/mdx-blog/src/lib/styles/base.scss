@@ -1,0 +1,33 @@
+html,
+body {
+  height: 100vh;
+	background-color: #18181b;
+}
+body {
+  position: relative;
+}
+h1 {
+  background: -webkit-linear-gradient(315deg,#22d3ee 25%,#1f9c72);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.05rem;
+  margin-top: 1rem !important;
+}
+h1 {
+  font-family:'Fira Mono', monospace;
+	font-weight: 700 !important;
+	position: relative;
+}
+h2, h3  {
+  margin: 1rem 0px 0.7rem 0 !important;
+}
+h3[slot=header], strong {
+  color: #d1d5db !important;
+}
+h2,
+h3 {
+  font-family:'Fira Mono', monospace;
+  letter-spacing: -0.05rem;
+  font-weight: 500 !important;
+	color: white !important;
+}

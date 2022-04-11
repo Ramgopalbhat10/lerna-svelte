@@ -1,0 +1,15 @@
+li:not(.s-mGyLUnjvcinH) {
+  margin: 0 !important;
+}
+a:not(.s-mGyLUnjvcinH) {
+	color: #22d3ee !important;
+}
+
+#mobile-menu.s-mGyLUnjvcinH .active.s-mGyLUnjvcinH {
+	color: #22d3ee !important;
+}
+
+.prose :where(a):not(:where([class~="not-prose"] *)) {
+	text-decoration: none !important;
+	border-bottom: 2px solid #155e75;
+}

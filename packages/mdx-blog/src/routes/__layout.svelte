@@ -1,14 +1,15 @@
 <script lang="ts">
-  import Header from '$lib/components/Header.svelte'
-  import Footer from '$lib/components/Footer.svelte'
-  import "$lib/styles/app.css";
-  import "$lib/styles/code.css";
+  import Header from '$lib/components/common/Header.svelte'
+  import Footer from '$lib/components/common/Footer.svelte'
+  import "$lib/styles/app.scss";
 </script>
 
-<div class="text-gray-300">
+<!-- <div class="text-gray-300"> -->
   <Header />
-  <main class="p-3 my-4 prose lg:prose-xl m-auto h-screen text-gray-300">
-    <slot />
-  </main>
+  <div class="min-h-screen">
+    <main class="p-3 prose lg:prose-xl m-auto text-gray-300 font-sans relative">
+      <slot />
+    </main>
+  </div>
   <Footer />
-</div>
+<!-- </div> -->

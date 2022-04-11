@@ -1,0 +1,128 @@
+@font-face {
+	font-family: 'Fira Mono';
+	src: url('../assets/fonts/FiraMono-Medium.ttf') format('ttf');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url(scrollbar.scss);
+@import url(base.scss);
+@import url(flowbite.scss);
+// @import url(code.scss);
+
+// variables
+$bg-primary: #18181b;
+$bg-secondary: #202024;
+$bg-code: #212127;
+
+h2,h3,h4,h5,h6 {
+	.visually-hidden {
+		opacity: 0;
+		position: absolute;
+	}
+}
+h2[aria-expanded] {
+	margin-bottom: 0 !important;
+	button {
+		padding: 0.8rem 1rem !important;
+		border: 1px solid #404040 !important;
+		border-radius: 0 !important;
+		&:focus {
+			box-shadow: 0px 0px 0px black !important;
+		}
+		&:hover {
+			background: $bg-primary !important;
+		}
+		@apply shadow-lg;
+	}
+	+ div > div {
+		padding: 0.8rem 1.2rem !important;
+		div > p {
+			a {
+				border: none !important;
+			}
+			:hover {
+				border-bottom: 2px solid #155e75 !important;		
+			}
+		}
+	}
+}
+h1 {
+	.visually-hidden {
+		display: none;
+	}
+}
+:where(h2,h3,h4,h5,h6) a[aria-hidden] {
+	position: absolute;
+	width: 2rem;
+  height: 2rem;
+	left: -20px;
+	border: none !important;
+}
+h2:hover, h3:hover {
+	.visually-hidden, .visually-hidden:hover {
+		opacity: 1;
+	}
+}
+
+hr {
+	border-color: #22d3ee !important;
+  margin: 3rem 0 1rem 0 !important;
+  width: 15%;
+	border-top-width: 5px !important;
+}
+
+main {
+	ul {
+		li {
+			p {
+				margin: 0.5rem 0 !important;
+			}
+		}
+	}
+}
+blockquote {
+	p {
+		@apply text-neutral-500
+	}
+}
+main {
+	p, ul > li {
+		code {
+			color: #1fa485 !important;
+			background-color: $bg-code;
+			padding: 0.2rem 0.5rem !important;
+			border-radius: 5px;
+			&::before, &::after {
+				display: none !important;
+			}
+		}
+	}
+}
+pre.shiki {
+	position: relative;
+	margin-top: 0;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+	background-color: $bg-code !important;
+	.language-id {
+		position: absolute !important;
+		bottom: 5px;
+		right: 1rem;
+		color: #5a5a5a;
+	}
+}
+.remark-code-title {
+	font-family: monospace;
+	font-size: 1rem;
+	margin-top: 1rem;
+	padding: 0.2em 1em;
+	background-color: #31313c;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+}

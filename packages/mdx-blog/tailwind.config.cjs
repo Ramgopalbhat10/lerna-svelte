@@ -5,8 +5,16 @@ module.exports = {
 		'../../node_modules/flowbite-svelte/**/*.{html,js,svelte,ts}'
 	],
 	theme: {
-		extend: {}
+		extend: {
+			colors: {
+				primary: '#18181b',
+				secondary: '#202024',
+				highlight: '#22d3ee',
+				underline: '#155e75'
+			}
+		}
 	},
 	plugins: [require('flowbite/plugin'), require('@tailwindcss/typography')],
-	darkMode: 'media'
+	darkMode: 'media',
+	important: true
 };

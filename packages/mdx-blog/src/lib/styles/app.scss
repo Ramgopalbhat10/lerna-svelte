@@ -10,9 +10,9 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url(scrollbar.scss);
 @import url(base.scss);
 @import url(flowbite.scss);
+@import url(scrollbar.scss);
 // @import url(code.scss);
 
 // variables
@@ -94,13 +94,19 @@ blockquote {
 main {
 	p, ul > li {
 		code {
-			color: #1fa485 !important;
-			background-color: $bg-code;
+			// color: #1fa485 !important;
+			color: #65BCFF !important;
+			// background-color: $bg-code;
+			background-color: #31313c;
+			font-weight: 500 !important;
 			padding: 0.2rem 0.5rem !important;
 			border-radius: 5px;
 			&::before, &::after {
 				display: none !important;
 			}
+		}
+		strong {
+			color: #65BCFF !important;
 		}
 	}
 }
@@ -125,4 +131,9 @@ pre.shiki {
 	background-color: #31313c;
 	border-top-left-radius: 0.5rem;
 	border-top-right-radius: 0.5rem;
+}
+
+.tag {
+	background-color: #31313c !important;
+	color: #22d3ee !important;
 }

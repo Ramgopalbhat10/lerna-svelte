@@ -8,14 +8,17 @@ import { createShikiHighlighter, runTwoSlash, renderCodeToHTML } from 'shiki-two
 import { readFileSync } from 'fs';
 import { h } from 'hastscript';
 
-const moonlight = JSON.parse(readFileSync('moonlight.json'));
+// const moonlight = JSON.parse(readFileSync('./moonlight.json'));
 
 const mdxVexPreprocess = mdsvex({
 	extensions: ['.svx', '.md'],
+	layout: {
+		blog: 'src/routes/blog/_post.svelte'
+	},
 	highlight: {
 		highlighter: async (code, lang, meta) => {
 			const highlighter = await createShikiHighlighter({
-				theme: moonlight
+				theme: JSON.parse(readFileSync('./moonlight.json'))
 			});
 
 			let twoslashResults = null;

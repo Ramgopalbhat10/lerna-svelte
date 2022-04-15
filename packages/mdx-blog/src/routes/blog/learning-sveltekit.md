@@ -1,13 +1,11 @@
 ---
+title: 'Learn Sveltekit with Tailwind'
+description: 'How to create a simple HTTP web server in Go.'
+date: 'February 25, 2022'
+heroImageAlt: 'Golang logos'
+thumbnailImageAlt: 'Golang logos'
+tags: 'svelte'
 ---
-
-<script>
-	import TableofContents from '$lib/components/TableofContents.svelte';
-</script>
-
-<TableofContents />
-
-# Learning Sveltekit with tailwind and mdx
 
 ## This is my heading
 

@@ -1,13 +1,11 @@
 ---
+title: 'Creating a blog with Astro and Tailwind CSS'
+description: 'How to create a simple HTTP web server in Go.'
+date: 'February 25, 2022'
+heroImageAlt: 'Golang logos'
+thumbnailImageAlt: 'Golang logos'
+tags: 'tailwind'
 ---
-
-<script>
-	import TableofContents from '$lib/components/TableofContents.svelte';
-</script>
-
-<TableofContents />
-
-# Creating my personal website with Astro and Tailwind CSS
 
 It is certainly something I have been thinking about doing for quite some time, but I never really went for it until now. Several reasons have deterred me in the past from creating a personal website, and while some of them might still be valid, I decided to give it a go and create something it could push me to try to create more content and a place where I can experiment with different technology stacks.
 
@@ -21,11 +19,11 @@ You can take a look at the source code in the website's [GitHub repository](http
 
 ## Technology stack
 
-I have been working with [Angular](https://angular.io) and [React](https://reactjs.org/) for more than couple of years and it would have been the most comfortable choice, but I wanted to try something new and different; after all, that was one of the main reasons I decided to create my personal website.
+I have been working with [Angular](https://angular.io) and [React](https://reactjs.org/) for more than a couple of years and it would have been the most comfortable choice, but I wanted to try something new and different; after all, that was one of the main reasons I decided to create my personal website.
 
 A few months ago, I came across [Astro](https://astro.build), a modern static site builder that promises to deliver great performance by shipping _zero_ JavaScript by default. With other interesting features like the ability to use other frameworks, on-demand partial hydration, and Markdown support, it immediately caught my attention and became my first choice.
 
-I also wanted to use [Tailwind CSS](https://tailwindcss.com). I've previously played with it and I really like its flexibility and how easy and fast you can prototype and style your site. I'm not a designer and I'm not a creative person, so I particularly like the ability to quickly try things out and see how they look to find out what I like the most.
+I also wanted to use [Tailwind CSS](https://tailwindcss.com). I've previously played with it and I like its flexibility and how easy and fast you can prototype and style your site. I'm not a designer and I'm not a creative person, so I particularly like the ability to quickly try things out and see how they look to find out what I like the most.
 
 For the hosting, I decided to go with [Cloudflare Pages](https://pages.cloudflare.com). It has the features I was looking for and more: automatic deployments from GitHub, preview PRs, ease of use, etc. There are several other great choices out there ([Netlify](https://www.netlify.com/), [Vercel](https://vercel.com), and [GitHub Pages](https://pages.github.com) to name a few) that I'll most likely be trying out in the future.
 
@@ -45,7 +43,7 @@ Before diving into creating the required pages and components, let's have a quic
 
 Astro comes with its own [component syntax](https://docs.astro.build/core-concepts/astro-components/). Any file with the `.astro` extension represents a single Astro component and it follows the **Single-File Component (SFC)** pattern by containing the HTML, CSS, and JavaScript needed to render the component in the same file.
 
-The Astro component syntax is very similar to HTML and JSX. In fact, it's a superset of HTML and every component must include an HTML template.
+The Astro component syntax is very similar to HTML and JSX. It's a superset of HTML and every component must include an HTML template.
 
 Astro also has the concept of a [Frontmatter component script](https://docs.astro.build/core-concepts/astro-components/#frontmatter-script) to build dynamic components. The component script natively supports JavaScript and Typescript and it will only be processed at build time.
 
@@ -115,7 +113,7 @@ The website currently has 3 types of pages: the landing page, the blog page, and
 
 Astro has a concept of [Layouts](https://docs.astro.build/core-concepts/layouts/). They are basically components with the specific purpose of providing a reusable page structure to reduce duplicating the same code on multiple pages.
 
-I created a `src/layouts/BaseLayout.astro` file with the following content:
+I created an `src/layouts/BaseLayout.astro` file with the following content:
 
 Alright! There's a lot going on there. Let's break it down to see what's going on.
 
@@ -125,7 +123,7 @@ Outside of that section, we can write our HTML markup as well as include `<style
 
 One important thing to note is the [`slot` tag](https://docs.astro.build/core-concepts/astro-components/#slots). This element allows us to render children elements passed inside the layout when consuming it.
 
-As you can see in the code, I'm importing several components from `../components`. This is a folder where I placed some common components used by the different website's pages.
+As you can see in the code, I'm importing several components from `../components`. This is a folder where I placed some common components used by the different website pages.
 
 The following is the specific portion of code in the `src/components/common/Head.astro` file that includes the global styles:
 

@@ -1,4 +1,7 @@
+import { fetchPostsWithMetadata } from '$lib/utils/fetchPosts';
+
 export const get = async () => {
+	// const allPosts = await fetchPostsWithMetadata();
 	const allPostFiles = import.meta.glob('../blog/*.md');
 	const iterablePostFiles = Object.entries(allPostFiles);
 

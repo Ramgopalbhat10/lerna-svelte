@@ -8,6 +8,17 @@ a:not(.s-mGyLUnjvcinH) {
 #mobile-menu.s-mGyLUnjvcinH .active.s-mGyLUnjvcinH {
 	color: #22d3ee !important;
 }
+@media only screen and (max-width: 767px) {
+	#mobile-menu {
+		height: 90px;
+		overflow: hidden;
+		transition: height 0.2s ease 0s;
+	}
+	#mobile-menu.hidden {
+		display: block  !important;
+		height: 0px !important;
+	}
+}
 
 .prose :where(a):not(:where([class~="not-prose"] *)) {
 	text-decoration: none !important;

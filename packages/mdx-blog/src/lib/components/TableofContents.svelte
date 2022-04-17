@@ -9,22 +9,24 @@
   let showTOC = false;
 
   onMount(() => {
-    const allTags = document.getElementsByTagName("main");
-    const headTags = allTags.item(0).children;
-
-    for (let index = 0; index < headTags.length; index++) {
-      if(headTags[index].nodeName === "H2" || headTags[index].nodeName === "H3") {
-        const heading = headTags[index].lastChild.nodeValue
-        const id = headTags[index].id
-        toc.push(heading)
-        tocId.push(id)
-        tocTag.push(headTags[index].nodeName)
-      }   
-    }
-
-    if(toc.length >= 1) {
-      showTOC = true
-    }
+    setTimeout(() => {
+      const allTags = document.getElementsByTagName("main");
+      const headTags = allTags.item(0).children;
+  
+      for (let index = 0; index < headTags.length; index++) {
+        if(headTags[index].nodeName === "H2" || headTags[index].nodeName === "H3") {
+          const heading = headTags[index].lastChild.nodeValue
+          const id = headTags[index].id
+          toc.push(heading)
+          tocId.push(id)
+          tocTag.push(headTags[index].nodeName)
+        }   
+      }
+  
+      if(toc.length >= 1) {
+        showTOC = true
+      }
+    }, 150)
   })
 
 

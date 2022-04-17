@@ -1,10 +1,11 @@
 ---
 title: 'Basic Go HTTP web server'
 description: 'How to create a simple HTTP web server in Go.'
-date: 'February 25, 2022'
+date: "2022-02-25"
 heroImageAlt: 'Golang logos'
 thumbnailImageAlt: 'Golang logos'
-tags: 'golang'
+categories: 
+	- 'golang'
 ---
 
 ---

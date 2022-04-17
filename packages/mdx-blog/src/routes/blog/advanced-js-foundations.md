@@ -1,8 +1,9 @@
 ---
 title: Advanced JavaScript Foundations
 description: Advanced JS concepts with code snippets
-date: 15-04-2022
-tags: javascript
+date: "2022-04-15"
+categories:
+	- 'javascript'
 ---
 
 ---

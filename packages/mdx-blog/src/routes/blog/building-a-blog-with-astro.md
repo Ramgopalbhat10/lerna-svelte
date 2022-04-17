@@ -1,10 +1,12 @@
 ---
 title: 'Creating a blog with Astro and Tailwind CSS'
 description: 'How to create a simple HTTP web server in Go.'
-date: 'February 25, 2022'
+date: '2022-02-25'
 heroImageAlt: 'Golang logos'
 thumbnailImageAlt: 'Golang logos'
-tags: 'tailwind'
+categories:
+  - 'tailwind'
+  - 'astro'
 ---
 
 It is certainly something I have been thinking about doing for quite some time, but I never really went for it until now. Several reasons have deterred me in the past from creating a personal website, and while some of them might still be valid, I decided to give it a go and create something it could push me to try to create more content and a place where I can experiment with different technology stacks.

@@ -1,5 +1,5 @@
 <script context="module" lang="ts">
-  import type { ParamCategory, Fetch, PostMeta } from '$lib/types'
+  import type { ParamCategory, PostMeta } from '$lib/types'
   import { fetchPosts } from '$lib/utils/fetchPosts';
   
   export const load = async ({ params }: { params: ParamCategory }) => {

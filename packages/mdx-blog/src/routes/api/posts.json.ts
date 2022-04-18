@@ -18,6 +18,9 @@ export const get = async () => {
 	);
 
 	return {
+		headers: {
+			'cache-control': 'public, max-age=3600'
+		},
 		body: allPosts
 	};
 };

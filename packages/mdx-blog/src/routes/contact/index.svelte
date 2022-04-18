@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>Connect with me | rgb</title>
+  <title>Connect with me | MRGB</title>
 </svelte:head>
 
 <h1>Get in touch</h1>

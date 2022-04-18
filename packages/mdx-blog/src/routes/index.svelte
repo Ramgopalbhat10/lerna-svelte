@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>RGB | Not a 10X developer</title>
+  <title>MRGB | Not a 10X developer</title>
 </svelte:head>
 
 <h1>Hi! I'm Ramgopal</h1>

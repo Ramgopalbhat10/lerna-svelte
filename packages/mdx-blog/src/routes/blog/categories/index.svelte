@@ -21,6 +21,10 @@
   export let categories: string[]
 </script>
 
+<svelte:head>
+  <title>All Categories | MRGB</title>
+</svelte:head>
+
 <h1>All Categories</h1>
 <p class="text-base font-normal">
   <span><a href="/blog" class="links font-normal">blog</a></span> / 

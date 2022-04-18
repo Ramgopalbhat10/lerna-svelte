@@ -24,7 +24,7 @@
 </script>
 
 <svelte:head>
-  <title>My blog posts | rgb</title>
+  <title>My blog posts | MRGB</title>
 </svelte:head>
 
 <h1>Blog posts</h1>

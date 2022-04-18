@@ -2,13 +2,21 @@
   import ScrollToTop from "$lib/components/ScrollToTop.svelte";
   import TableofContents from "$lib/components/TableofContents.svelte";
   export let title
+  export let description
   export let date
   export let categories
 </script>
 
 <svelte:head>
-  <title>{title} | rgb</title>
+  <title>{title} | MRGB</title>
+  <meta name="author" content="Madumbu Ramgopal" />
+  <meta name="description" content={description} />
+  <meta
+    name="keywords"
+    content="Madumbu Ramgopal, Blog, Web Development, Angular, React, Vue, JavasScript, TypeScript, HTML, CSS, Monorepos, Nx"
+  />
   <meta property="og:title" content={title} />
+  <meta property="og:description" content={description} />
 </svelte:head>
 
 <h1>{title}</h1>

@@ -22,6 +22,10 @@
   export let category: string
 </script>
 
+<svelte:head>
+  <title>All blog posts under { category } | MRGB</title>
+</svelte:head>
+
 <h1>All blog posts under <span class="border-b-cyan-800 border-b-4 !text-neutral-300">{category}</span></h1>
 <p class="text-base font-normal">
   <span><a href="/blog" class="links font-normal">blog</a></span> / 

@@ -2,7 +2,7 @@
   import { Navbar } from 'flowbite-svelte';
   import logo from '$lib/assets/images/logo2.png';
 
-  let name = 'MSRGB';
+  let name = 'MRGB';
   let alt = "MRGB site";
   let textsize = "text-xl";
   let menus = [

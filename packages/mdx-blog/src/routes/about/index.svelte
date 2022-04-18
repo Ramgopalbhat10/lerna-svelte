@@ -1,5 +1,5 @@
 <svelte:head>
-  <title>About me | rgb</title>
+  <title>About me | MRGB</title>
 </svelte:head>
 
 <h1>Hi, I'm Ram!</h1>

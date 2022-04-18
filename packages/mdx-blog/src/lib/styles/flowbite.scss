@@ -2,12 +2,17 @@ li:not(.s-mGyLUnjvcinH) {
   margin: 0 !important;
 }
 a:not(.s-mGyLUnjvcinH) {
-	color: #22d3ee !important;
+	color: #22d3ee;
 }
 
 #mobile-menu.s-mGyLUnjvcinH .active.s-mGyLUnjvcinH {
 	color: #22d3ee !important;
 }
+
+.nav-links.active {
+	color: #22d3ee !important;
+}
+
 @media only screen and (max-width: 767px) {
 	#mobile-menu {
 		height: 90px;

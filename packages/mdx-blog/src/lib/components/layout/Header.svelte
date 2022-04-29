@@ -25,7 +25,7 @@
   ]
 </script>
 
-<div class="p-3 font-medium shadow-md">
+<div class="p-3 font-medium shadow-md border-b-2 border-b-zinc-800">
   <Navbar {menus} {name} {alt} {logo} {textsize} 
     spanClass="mx-2 my-0.5 text-gray-300 text-xl" 
     navClass="active:text-gray-800"

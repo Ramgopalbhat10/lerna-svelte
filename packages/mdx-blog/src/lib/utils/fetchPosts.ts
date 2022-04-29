@@ -1,10 +1,19 @@
-import type { Meta, PostMeta } from '$lib/types';
+import type { Meta, PostMeta, Fetch } from '$lib/types';
 
-export const fetchPosts = async () => {
-	const response = await fetch('/api/posts.json');
+export const fetchPosts = async (fetch: typeof Fetch, type?: string) => {
+	const uri = type === 'snippets' ? 'snippets' : 'posts';
+	const response = await fetch(`/api/${uri}.json`);
 	const posts: PostMeta[] = await response.json();
 
 	return posts;
+};
+
+export const filterCategories = (posts: PostMeta[]) => {
+	const categories = posts.reduce((arr: string[], post) => {
+		arr.push(...post.meta.categories);
+		return arr;
+	}, []);
+	return [...new Set(categories)];
 };
 
 export const fetchPostsWithMetadata = async (): Promise<PostMeta[]> => {

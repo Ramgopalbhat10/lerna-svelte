@@ -3,7 +3,7 @@
   import { fetchPosts, filterCategories } from '$lib/utils/fetchPosts';
   
   export const load = async ({ fetch }: { fetch: typeof Fetch }) => {
-    const posts = await fetchPosts(fetch)
+    const posts = await fetchPosts(fetch, "snippets")
     const filteredCategories = filterCategories(posts)
     return {
       props: {
@@ -17,8 +17,8 @@
   import ContentList from '$lib/components/ContentList.svelte';
   export let posts: PostMeta[]
   export let categories: string[]
-  let title = "Blog posts"
-  let path = "blog"
+  let title = "Code Snippets"
+  let path = "snippets"
 </script>
 
 <ContentList {posts} {categories} {title} {path}/>

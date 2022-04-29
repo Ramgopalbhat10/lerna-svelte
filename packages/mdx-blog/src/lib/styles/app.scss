@@ -113,8 +113,8 @@ main {
 pre.shiki {
 	position: relative;
 	margin-top: 0;
-	border-top-left-radius: 0;
-	border-top-right-radius: 0;
+	// border-top-left-radius: 0;
+	// border-top-right-radius: 0;
 	background-color: $bg-code !important;
 	.language-id {
 		position: absolute !important;
@@ -131,9 +131,14 @@ pre.shiki {
 	background-color: #31313c;
 	border-top-left-radius: 0.5rem;
 	border-top-right-radius: 0.5rem;
+
+	+ .shiki {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
 }
 
 .tag {
 	background-color: #31313c !important;
-	color: #22d3ee !important;
+	color: #22d3ee;
 }

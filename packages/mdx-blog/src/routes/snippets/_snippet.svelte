@@ -4,7 +4,7 @@
   export let description
   export let date
   export let categories
-  let path = 'blog'
+  let path = 'snippets'
 </script>
 
 <ContentLayout {title} {description} {date} {categories} {path}/>

@@ -14,8 +14,8 @@
 
 <script lang="ts">
   import { fade } from "svelte/transition";
-  import Header from '$lib/components/common/Header.svelte'
-  import Footer from '$lib/components/common/Footer.svelte'
+  import Header from '$lib/components/layout/Header.svelte'
+  import Footer from '$lib/components/layout/Footer.svelte'
   import "$lib/styles/app.scss";
 
   export let currentRoute: string

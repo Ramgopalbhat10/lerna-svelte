@@ -1,8 +1,8 @@
 <script context="module" lang="ts">
   import type { Fetch } from '$lib/types'
-  import { fetchPosts,filterCategories } from '$lib/utils/fetchPosts';
+  import { fetchPosts, filterCategories } from '$lib/utils/fetchPosts';
   export const load = async ({ fetch }: { fetch: typeof Fetch }) => {
-    const posts = await fetchPosts(fetch)
+    const posts = await fetchPosts(fetch, "snippets")
     const filteredCategories = filterCategories(posts)
 
     return {
@@ -16,7 +16,7 @@
 <script lang="ts">
   import Categories from '$lib/components/Categories.svelte';
   export let categories: string[]
-  let path = 'blog'
+  let path = 'snippets'
 </script>
 
 <Categories {categories} {path}/>

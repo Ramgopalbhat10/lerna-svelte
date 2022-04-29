@@ -13,7 +13,8 @@ import { h } from 'hastscript';
 const mdxVexPreprocess = mdsvex({
 	extensions: ['.svx', '.md'],
 	layout: {
-		blog: 'src/routes/blog/_post.svelte'
+		blog: 'src/routes/blog/_post.svelte',
+		snippets: 'src/routes/snippets/_snippet.svelte'
 	},
 	highlight: {
 		highlighter: async (code, lang, meta) => {

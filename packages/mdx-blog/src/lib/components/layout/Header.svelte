@@ -6,10 +6,10 @@
   let alt = "MRGB site";
   let textsize = "text-xl";
   let menus = [
-    {
-      name: 'About',
-      href: "/about"
-    },
+    // {
+    //   name: 'About',
+    //   href: "/about"
+    // },
     {
       name: 'Blog',
       href: "/blog"

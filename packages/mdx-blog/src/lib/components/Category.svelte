@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { ArrowRightIconOutline } from '@codewithshin/svelte-heroicons'
   import type { PostMeta } from '$lib/types'
   export let posts: PostMeta[]
   export let category: string
@@ -11,9 +12,9 @@
 </svelte:head>
 
 <h1>All {title} under <span class="border-b-cyan-800 border-b-4 !text-neutral-300">{category}</span></h1>
-<p class="text-base font-normal">
-  <span><a href="/{path}" class="links font-normal">{path}</a></span> / 
-  <span><a href="/{path}/categories" class="links font-normal">categories</a></span> / 
+<p class="text-xl font-normal flex">
+  <span><a href="/{path}" class="links font-normal">{path}</a></span> <ArrowRightIconOutline className="w-5 mx-2"/>
+  <span><a href="/{path}/categories" class="links font-normal">categories</a></span> <ArrowRightIconOutline className="w-5 mx-2"/>
   <span><a href="/{path}/categories/{category}" class="font-normal">{category}</a></span>
 </p>
 <ul>

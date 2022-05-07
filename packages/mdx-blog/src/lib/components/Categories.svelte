@@ -1,15 +1,17 @@
 <script lang="ts">
+  import { ArrowRightIconOutline } from '@codewithshin/svelte-heroicons'
+  import { page } from '$app/stores'
   export let categories: string[]
   export let path: string
-</script>
+ </script>
 
 <svelte:head>
   <title>All Categories | MRGB</title>
 </svelte:head>
 
 <h1>All Categories</h1>
-<p class="text-base font-normal">
-  <span><a href="/{path}" class="links font-normal">{path}</a></span> / 
+<p class="text-xl font-normal flex">
+  <span><a href="/{path}" class="links font-normal">{path}</a></span> <ArrowRightIconOutline className="w-5 mx-2"/>
   <span><a href="/{path}/categories" class="font-normal">categories</a></span>
 </p>
 {#each categories as category}

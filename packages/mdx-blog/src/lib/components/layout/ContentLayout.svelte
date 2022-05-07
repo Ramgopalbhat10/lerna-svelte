@@ -6,6 +6,12 @@
   export let date
   export let categories
   export let path
+  $: published = new Date(date).toDateString().slice(4)
+  $: {
+    let dateSplit = published.split(" ")
+    dateSplit[1] = dateSplit[1] + ","
+    published = dateSplit.join(" ")
+  }
 </script>
 
 <svelte:head>
@@ -22,11 +28,11 @@
 
 <h1>{title}</h1>
 
-<div class="text-base">
-  <p class="!mt-0 !mb-2">Published: {new Date(date).toDateString().slice(3)}</p>
-  <p class="!mt-0 !mb-2">Categories: 
+<div class="text-base !mb-8 flex items-center">
+  <p class="m-0 mr-4">{published}</p>
+  <p class="m-0"> 
     {#each categories as category}
-      <a href="/{path}/categories/{category}" class="border-b-0" sveltekit:prefetch><span class="px-2 py-0.5 ml-2 tag rounded-md">{category}</span></a>
+      <a href="/{path}/categories/{category}" class="border-b-0" sveltekit:prefetch><span class="px-2 py-0.5 mr-2 tag rounded-md">{category}</span></a>
     {/each}
   </p>
 </div>
